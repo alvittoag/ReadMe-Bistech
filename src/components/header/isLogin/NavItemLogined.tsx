@@ -1,10 +1,9 @@
-import { is } from "immer/dist/internal";
-import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { addActive } from "../../../app/features/userSlices";
 import { useAppSelector } from "../../../app/hooks";
 import { RootState } from "../../../app/store";
+import assets from "../../../constant/assets";
 
 const items = [
   { name: "Home", link: "/" },
@@ -15,10 +14,9 @@ const items = [
 
 const NavItemLoginded = () => {
   const isActive = useAppSelector((state: RootState) => state.user.isActive);
-  console.log(isActive);
   const dispatch = useDispatch();
   return (
-    <div className="flex gap-12">
+    <div className="flex items-center gap-12">
       {items.map((item) => (
         <Link
           to={item.link}
@@ -33,6 +31,22 @@ const NavItemLoginded = () => {
           {item.name}
         </Link>
       ))}
+      <Link
+        to="/user"
+        className="flex gap-5 items-center"
+        onClick={() => dispatch(addActive("User"))}
+      >
+        <img src={assets.user1} alt="user" />
+        <p
+          className={
+            isActive === "User"
+              ? "navbar-text-items font-semibold"
+              : "navbar-text-items"
+          }
+        >
+          Uzumaki Saburo
+        </p>
+      </Link>
     </div>
   );
 };

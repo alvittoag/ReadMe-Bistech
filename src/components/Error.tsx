@@ -1,7 +1,14 @@
-import React from "react";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Error = () => {
-  return <div>Error</div>;
+  const navigate = useNavigate();
+  useEffect(() => {
+    alert("you must login");
+    navigate("/");
+  }, []);
+
+  return <div className="mt-[23rem]"></div>;
 };
 
 export default Error;

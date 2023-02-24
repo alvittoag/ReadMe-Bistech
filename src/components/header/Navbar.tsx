@@ -6,7 +6,7 @@ import NavItem from "./NavItem";
 const Navbar = () => {
   const isLogin = useAppSelector((state) => state.user.isLogin);
   return (
-    <nav className="flex justify-between px-[60px] py-[25px]">
+    <nav className="flex justify-between px-[60px] py-[20px]">
       <img src={assets.logo} alt="logo" />
       {isLogin ? <NavItemLoginded /> : <NavItem />}
     </nav>
