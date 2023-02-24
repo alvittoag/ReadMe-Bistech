@@ -11,6 +11,7 @@ import loginCover from "../assets/images/login-cover.png";
 import close from "../assets/images/close.svg";
 import hero2 from "../assets/images/hero2.svg";
 import bannerBukuFavorite from "../assets/images/banner-buku-favorite.svg";
+import footerLogo from "../assets/images/footer-logo.svg";
 
 export default {
   logo,
@@ -26,4 +27,5 @@ export default {
   close,
   hero2,
   bannerBukuFavorite,
+  footerLogo,
 };

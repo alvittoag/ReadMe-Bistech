@@ -8,9 +8,10 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface userState {
   isLogin: boolean;
+  isActive: string;
 }
 
-const initialState: userState = { isLogin: false };
+const initialState: userState = { isLogin: false, isActive: "Home" };
 
 const userSlice = createSlice({
   name: "user",
@@ -19,9 +20,12 @@ const userSlice = createSlice({
     addUser: (state, action: PayloadAction<boolean>) => {
       state.isLogin = action.payload;
     },
+    addActive: (state, action: PayloadAction<string>) => {
+      state.isActive = action.payload;
+    },
   },
 });
 
-export const { addUser } = userSlice.actions;
+export const { addUser, addActive } = userSlice.actions;
 
 export const userReducer = userSlice.reducer;

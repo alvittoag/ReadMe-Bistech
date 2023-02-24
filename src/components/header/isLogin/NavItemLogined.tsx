@@ -1,6 +1,10 @@
+import { is } from "immer/dist/internal";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { addActive } from "../../../app/features/userSlices";
+import { useAppSelector } from "../../../app/hooks";
+import { RootState } from "../../../app/store";
 
 const items = [
   { name: "Home", link: "/" },
@@ -10,16 +14,18 @@ const items = [
 ];
 
 const NavItemLoginded = () => {
-  const [active, setActive] = useState<string>("Home");
+  const isActive = useAppSelector((state: RootState) => state.user.isActive);
+  console.log(isActive);
+  const dispatch = useDispatch();
   return (
     <div className="flex gap-12">
       {items.map((item) => (
         <Link
           to={item.link}
-          onClick={() => setActive(item.name)}
+          onClick={() => dispatch(addActive(item.name))}
           key={item.name}
           className={
-            active === item.name
+            isActive === item.name
               ? "navbar-text-items font-semibold"
               : "navbar-text-items"
           }

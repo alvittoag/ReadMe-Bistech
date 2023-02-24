@@ -1,4 +1,4 @@
-import ListBook from "../components/user/BukuFavorit/ListBook";
+import ListBook from "../../components/user/BukuFavorit/ListBook";
 
 const BukuFavorite = () => {
   return (
