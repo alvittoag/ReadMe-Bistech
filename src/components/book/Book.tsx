@@ -1,5 +1,6 @@
 import assets from "../../constant/assets";
 import { useState } from "react";
+import { useAppSelector } from "../../app/hooks";
 
 type Props = {
   image: string;
@@ -8,6 +9,8 @@ type Props = {
 
 const Book = ({ image, title }: Props) => {
   const [liked, setLiked] = useState<boolean>(false);
+  const isLogin = useAppSelector((state) => state.user.isLogin);
+
   return (
     <div>
       <img src={image} alt="buku" />
@@ -17,7 +20,9 @@ const Book = ({ image, title }: Props) => {
           Baca Sinopsis
         </button>
         <div className="mt-5" onClick={() => setLiked((liked) => !liked)}>
-          {liked ? (
+          {isLogin ? (
+            <img src={assets.liked} alt="" />
+          ) : liked ? (
             <img src={assets.liked} />
           ) : (
             <img src={assets.like} alt="" />

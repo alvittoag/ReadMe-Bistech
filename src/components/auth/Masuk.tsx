@@ -1,8 +1,21 @@
 import assets from "../../constant/assets";
 
+import { useDispatch } from "react-redux";
+import { addUser } from "../../app/features/userSlices";
+import { toogleAuth } from "../../app/features/toggleSlice";
+
 const Masuk = () => {
+  const dispatch = useDispatch();
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    dispatch(addUser(true));
+    alert("Login Sukses");
+    dispatch(toogleAuth(false));
+  };
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className="flex flex-col justify-start items-start gap-2 text-[16px] text-[#FBF8F1]">
         <label htmlFor="name">Nama Pengguna</label>
         <input
@@ -35,7 +48,10 @@ const Masuk = () => {
       </div>
 
       <div className="py-[30px] flex flex-col">
-        <button className="w-[200px] h-[60px] bg-[#FDDC99] text-[24px] text-[#313552] font-[600]">
+        <button
+          type="submit"
+          className="w-[200px] h-[60px] bg-[#FDDC99] text-[24px] text-[#313552] font-[600]"
+        >
           Masuk
         </button>
         <div className="flex gap-5 py-[51px] items-center">

@@ -1,8 +1,9 @@
 import { toogleAuth, toogleChooseAuth } from "../../app/features/toggleSlice";
-import { useAppDispatch } from "../../app/hooks";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import assets from "../../constant/assets";
 
 const Hero = () => {
+  const isLogin = useAppSelector((state) => state.user.isLogin);
   const dispatch = useAppDispatch();
   return (
     <div className="min-h-[552px] bg-[#FBF8F1] flex items-center">
@@ -19,15 +20,17 @@ const Hero = () => {
           <button className="bg-[#313552] px-9 py-3 text-[#F5F0F0] text-[24px]">
             Mulai Baca
           </button>
-          <p
-            onClick={() => [
-              dispatch(toogleAuth(true)),
-              dispatch(toogleChooseAuth("Daftar")),
-            ]}
-            className="text-[#313552] text-[24px] cursor-pointer"
-          >
-            Daftar Akun
-          </p>
+          {!isLogin && (
+            <p
+              onClick={() => [
+                dispatch(toogleAuth(true)),
+                dispatch(toogleChooseAuth("Daftar")),
+              ]}
+              className="text-[#313552] text-[24px] cursor-pointer"
+            >
+              Daftar Akun
+            </p>
+          )}
         </div>
       </div>
       <div className="-mt-7 relative">
@@ -35,7 +38,7 @@ const Hero = () => {
           <p className="text-[20px] text-[#313552] font-[600]">100+</p>
           <p className="text-[16px] text-[#313552] font-[600]">Buku tersedia</p>
         </div>
-        <img src={assets.hero} alt="hero" />
+        <img src={isLogin ? assets.hero2 : assets.hero} alt="hero" />
       </div>
     </div>
   );

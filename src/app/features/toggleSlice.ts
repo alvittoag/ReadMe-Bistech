@@ -1,11 +1,11 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-export interface userState {
+export interface toogleState {
   auth: boolean;
   chooseAuth: string;
 }
 
-const initialState: userState = { auth: false, chooseAuth: "Masuk" };
+const initialState: toogleState = { auth: false, chooseAuth: "Masuk" };
 
 const toogleSlice = createSlice({
   name: "toogle",
