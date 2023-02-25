@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import assets from "../../../constant/assets";
 
 const Banner = () => {
@@ -24,9 +25,11 @@ const Banner = () => {
             </div>
           </div>
           <div>
-            <button className="w-[140px] h-[40px] bg-[#313552] font-[400]">
-              Edit Profile
-            </button>
+            <Link to="/user/edit-profile">
+              <button className="w-[140px] h-[40px] bg-[#313552] font-[400]">
+                Edit Profile
+              </button>
+            </Link>
           </div>
         </div>
       </div>

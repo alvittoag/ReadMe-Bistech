@@ -22,6 +22,7 @@ import dibaca3 from "../assets/images/dibaca3.svg";
 import dibaca4 from "../assets/images/dibaca4.svg";
 import dibaca5 from "../assets/images/dibaca5.svg";
 import dibaca6 from "../assets/images/dibaca6.svg";
+import user3 from "../assets/images/user3.svg";
 
 export default {
   logo,
@@ -48,4 +49,5 @@ export default {
   dibaca4,
   dibaca5,
   dibaca6,
+  user3,
 };

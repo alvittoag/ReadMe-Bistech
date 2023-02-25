@@ -6,4 +6,13 @@
   .navbar-text-items {
     @apply text-[20px] text-[#313552];
   }
+  .label-edit {
+    @apply text-[#707176] text-[24px];
+  }
+  .input-edit {
+    @apply w-[430px] h-[45px] border border-[#EAEAEA] mt-[20px] px-3 text-[24px] text-[#313552];
+  }
+  .input-bio {
+    @apply w-[900px] h-[45px] border border-[#EAEAEA] mt-[20px] px-3 text-[24px] text-[#313552];
+  }
 }
