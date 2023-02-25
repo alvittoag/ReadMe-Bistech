@@ -8,6 +8,7 @@ import BukuSaya from "./pages/user/BukuSaya";
 import Footer from "./components/Footer";
 import UserPage from "./pages/user/UserPage";
 import EditProfile from "./pages/user/EditProfile";
+import DetailSinopsis from "./pages/user/DetailSinopsis";
 
 function App() {
   const isLogin = useAppSelector((state) => state.user.isLogin);
@@ -23,6 +24,7 @@ function App() {
             <Route path="/buku-saya" element={<BukuSaya />} />
             <Route path="/user" element={<UserPage />} />
             <Route path="/user/edit-profile" element={<EditProfile />} />
+            <Route path="/buku/sinopsis" element={<DetailSinopsis />} />
           </>
         )}
         <Route path="*" element={<Error />} />

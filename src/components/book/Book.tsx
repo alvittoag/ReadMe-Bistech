@@ -1,6 +1,7 @@
 import assets from "../../constant/assets";
 import { useState } from "react";
 import { useAppSelector } from "../../app/hooks";
+import { useNavigate } from "react-router-dom";
 
 type Props = {
   image: string;
@@ -11,6 +12,7 @@ const Book = ({ image, title }: Props) => {
   const [liked, setLiked] = useState<boolean>();
   const isActive = useAppSelector((state) => state.user.isActive);
   const active = isActive === "Buku Saya";
+  const navigate = useNavigate();
 
   return (
     <div>
@@ -18,6 +20,7 @@ const Book = ({ image, title }: Props) => {
       <h1 className="text-[20px] mt-[24px]">{title}</h1>
       <div className="flex items-center gap-7">
         <button
+          onClick={() => navigate("/buku/sinopsis")}
           className={`mt-[20px] bg-[#313552] text-[24px] ${
             active ? "px-[33px]" : "px-[40px]"
           } text-white py-2`}

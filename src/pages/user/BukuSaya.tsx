@@ -1,4 +1,3 @@
-import React from "react";
 import ListBook from "../../components/book/ListBook";
 
 const BukuSaya = () => {
