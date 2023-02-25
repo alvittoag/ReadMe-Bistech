@@ -12,12 +12,12 @@ const ListBook = ({ title }: Props) => {
   return (
     <div id="book">
       <div className="flex justify-between items-center">
-        <h1 className="text-[#313552] text-[32px] font-[600]">{title}</h1>
+        <h1 className="text-[#313552] text-[32px] font-[500]">{title}</h1>
         {!active && <p className="text-[#707176] text-[24px]">Lihat Semua</p>}
       </div>
-      <div className="mt-[28px] grid grid-cols-4 items-stretch gap-8">
+      <div className="mt-[28px] grid grid-cols-4 gap-8 2xl:gap-10">
         {books.map((book) => (
-          <Book image={book.img} title={book.title} />
+          <Book key={book.id} image={book.img} title={book.title} />
         ))}
       </div>
     </div>

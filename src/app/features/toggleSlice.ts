@@ -3,9 +3,14 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 export interface toogleState {
   auth: boolean;
   chooseAuth: string;
+  pinjam: boolean;
 }
 
-const initialState: toogleState = { auth: false, chooseAuth: "Masuk" };
+const initialState: toogleState = {
+  auth: false,
+  chooseAuth: "Masuk",
+  pinjam: false,
+};
 
 const toogleSlice = createSlice({
   name: "toogle",
@@ -17,9 +22,13 @@ const toogleSlice = createSlice({
     toogleChooseAuth: (state, action: PayloadAction<string>) => {
       state.chooseAuth = action.payload;
     },
+    tooglePinjam: (state, action: PayloadAction<boolean>) => {
+      state.pinjam = action.payload;
+    },
   },
 });
 
-export const { toogleAuth, toogleChooseAuth } = toogleSlice.actions;
+export const { toogleAuth, toogleChooseAuth, tooglePinjam } =
+  toogleSlice.actions;
 
 export const toogleReducer = toogleSlice.reducer;

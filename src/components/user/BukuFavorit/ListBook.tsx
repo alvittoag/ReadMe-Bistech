@@ -10,7 +10,7 @@ const ListBook = () => {
       </div>
       <div className="mt-[28px] grid grid-cols-4 items-stretch gap-8">
         {books.map((book) => (
-          <div className="space-y-28">
+          <div key={book.id} className="space-y-28">
             <Book image={book.img} title={book.title} />
             <Book image={book.img} title={book.title} />
             <Book image={book.img} title={book.title} />

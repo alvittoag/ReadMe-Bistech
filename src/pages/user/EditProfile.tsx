@@ -1,13 +1,21 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import assets from "../../constant/assets";
 
 const EditProfile = () => {
   const navigate = useNavigate();
+  const [isHover, setIsHover] = useState<boolean>(false);
   return (
     <div className="bg-[#FBFBFB] px-[60px] py-[50px]">
       <h1 className="text-[#313552] text-[32px] font-[600]">Edit Profile</h1>
       <div className="flex gap-16 items-start mt-[39px]">
-        <img src={assets.user3} alt="user" />
+        <img
+          src={isHover ? assets.hoverProfil : assets.user3}
+          onMouseEnter={() => setIsHover(true)}
+          onMouseLeave={() => setIsHover(false)}
+          className={`${isHover && "cursor-pointer"} `}
+          alt="user"
+        />
         <div>
           <form>
             <div className="flex gap-10">

@@ -1,9 +1,9 @@
-import assets from "../../constant/assets";
+import assets from "../../../constant/assets";
 
 const Rincian = () => {
   return (
     <div className="absolute top-20 ml-10">
-      <h1 className="text-[32px] text-[#313552]">Rincian Buku</h1>
+      <h1 className="text-[32px] text-[#313552] font-[600]">Rincian Buku</h1>
       <div className="flex gap-5 mt-[30px]">
         <img src={assets.sinopsis1} alt="buku" />
         <div className="space-y-3">
@@ -27,7 +27,7 @@ const Rincian = () => {
       </div>
       <div className="mt-[30px] flex flex-col">
         <h1 className="text-[24px] font-[600]">Sinopsis</h1>
-        <p className="max-w-[71rem] text-[16px] text-justify mt-[14px] font-[400]">
+        <p className="max-w-[71rem] 2xl:max-w-[77rem] text-[16px] text-justify mt-[14px] font-[400]">
           Rompis bercerita tentang pemuda SMA bernama Roman yang terkenal dengan
           julukan Roman Picisan. Ia mendapat julukan itu karena Roman sering
           menjual puisi picisan kepada kawan-kawannya. Selain itu, puisi yang ia

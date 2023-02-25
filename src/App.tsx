@@ -14,22 +14,24 @@ function App() {
   const isLogin = useAppSelector((state) => state.user.isLogin);
   return (
     <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
+      <div className="max-w-[1440px] mx-auto">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
 
-        {isLogin && (
-          <>
-            <Route path="/buku-favorit" element={<BukuFavorite />} />
-            <Route path="/buku-saya" element={<BukuSaya />} />
-            <Route path="/user" element={<UserPage />} />
-            <Route path="/user/edit-profile" element={<EditProfile />} />
-            <Route path="/buku/sinopsis" element={<DetailSinopsis />} />
-          </>
-        )}
-        <Route path="*" element={<Error />} />
-      </Routes>
-      <Footer />
+          {isLogin && (
+            <>
+              <Route path="/buku-favorit" element={<BukuFavorite />} />
+              <Route path="/buku-saya" element={<BukuSaya />} />
+              <Route path="/user" element={<UserPage />} />
+              <Route path="/user/edit-profile" element={<EditProfile />} />
+              <Route path="/buku/sinopsis" element={<DetailSinopsis />} />
+            </>
+          )}
+          <Route path="*" element={<Error />} />
+        </Routes>
+        <Footer />
+      </div>
     </Router>
   );
 }

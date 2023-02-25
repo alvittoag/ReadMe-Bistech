@@ -23,5 +23,5 @@ export const dibaca = [
   { id: "3", title: "Cerita asli indonesia vol.1", img: assets.dibaca3 },
   { id: "4", title: "Cerita asli indonesia vol.2", img: assets.dibaca4 },
   { id: "5", title: "Sejarah Lokal Di Indonesia", img: assets.dibaca5 },
-  { id: "6", title: "Sejarah Lokal Di Indonesia", img: assets.dibaca6 },
+  { id: "6", title: "Sang Keris", img: assets.dibaca6 },
 ];

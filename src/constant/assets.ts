@@ -26,6 +26,8 @@ import user3 from "../assets/images/user3.svg";
 import baseSinopsis from "../assets/images/base-sinopsis.svg";
 import sinopsis1 from "../assets/images/sinopsis1.svg";
 import sinopsis2 from "../assets/images/sinopsis2.svg";
+import hoverProfil from "../assets/images/hover-profile.svg";
+import bookKonfirmasi from "../assets/images/book-konfirmasi.svg";
 
 export default {
   logo,
@@ -56,4 +58,6 @@ export default {
   baseSinopsis,
   sinopsis1,
   sinopsis2,
+  hoverProfil,
+  bookKonfirmasi,
 };

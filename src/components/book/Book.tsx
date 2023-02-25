@@ -27,7 +27,7 @@ const Book = ({ image, title }: Props) => {
         >
           {active ? "Baca Sekarang" : "Baca Sinopsis"}
         </button>
-        <div className="mt-5">
+        <div className="mt-5 cursor-pointer">
           {isActive === "Buku Favorite" ? (
             <img src={assets.liked} alt="liked" />
           ) : (

@@ -7,7 +7,7 @@ import Hero from "../components/header/Hero";
 const Home = () => {
   const toogle = useAppSelector((state: RootState) => state.toogle.auth);
   return (
-    <div className={toogle ? "relative" : "static"}>
+    <div className={`${toogle ? "relative" : "static"}`}>
       <Hero />
 
       {toogle ? (

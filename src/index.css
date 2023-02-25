@@ -10,15 +10,21 @@
     @apply text-[#707176] text-[24px];
   }
   .input-edit {
-    @apply w-[430px] h-[45px] border border-[#EAEAEA] mt-[20px] px-3 text-[24px] text-[#313552];
+    @apply w-[430px] 2xl:w-[480px] h-[45px] border border-[#EAEAEA] mt-[20px] px-3 text-[24px] text-[#313552];
   }
   .input-bio {
-    @apply w-[900px] h-[45px] border border-[#EAEAEA] mt-[20px] px-3 text-[24px] text-[#313552];
+    @apply w-[900px] 2xl:w-[1006px] h-[45px] border border-[#EAEAEA] mt-[20px] px-3 text-[24px] text-[#313552];
   }
   .judul-sinopsis {
     @apply text-[16px] text-[#707176];
   }
   .isi-sinopsis {
     @apply text-[#313552] text-[24px] font-[600];
+  }
+  .isi-konfirmasi {
+    @apply text-[#FBF8F1] text-[24px] font-[400];
+  }
+  .judul-konfirmasi {
+    @apply text-[16px] text-[#B4CADC];
   }
 }

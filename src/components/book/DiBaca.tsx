@@ -14,7 +14,7 @@ const DiBaca = ({ title, img }: Props) => {
     );
 
   return (
-    <div className="text-[20px] font-[600] text-[#313552]">
+    <div className="text-[20px] font-[400] text-[#313552]">
       <img src={img} alt="buku" />
       <div className="mt-[14px]">{validateTitle}</div>
     </div>
