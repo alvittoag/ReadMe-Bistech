@@ -7,7 +7,7 @@ import Hero from "../components/header/Hero";
 const Home = () => {
   const toogle = useAppSelector((state: RootState) => state.toogle.auth);
   return (
-    <div className={`${toogle ? "relative" : "static"}`}>
+    <div className={toogle ? "relative" : "static"}>
       <Hero />
 
       {toogle ? (
@@ -18,7 +18,7 @@ const Home = () => {
         <div className="bg-transparent "></div>
       )}
 
-      <div className="px-[60px] py-[100px] space-y-24">
+      <div className="px-[60px] py-[100px] space-y-24 bg-[#FBFBFB]">
         <ListBook title="Buku Terbaru" />
         <ListBook title="Buku yang sering dibaca" />
         <ListBook title="Buku Cerita" />

@@ -2,7 +2,7 @@ import ListBook from "../../components/user/BukuFavorit/ListBook";
 
 const BukuFavorite = () => {
   return (
-    <div className="px-[60px] py-[50px]">
+    <div className="px-[60px] py-[50px] bg-[#FBFBFB]">
       <ListBook />
     </div>
   );
