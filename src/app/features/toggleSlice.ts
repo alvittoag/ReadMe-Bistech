@@ -5,6 +5,7 @@ export interface toogleState {
   chooseAuth: string;
   pinjam: boolean;
   sukses: boolean;
+  changeMode: string;
 }
 
 const initialState: toogleState = {
@@ -12,6 +13,7 @@ const initialState: toogleState = {
   chooseAuth: "Masuk",
   pinjam: false,
   sukses: false,
+  changeMode: "Sinopsis",
 };
 
 const toogleSlice = createSlice({
@@ -30,10 +32,18 @@ const toogleSlice = createSlice({
     toogleSukses: (state, action: PayloadAction<boolean>) => {
       state.sukses = action.payload;
     },
+    toogleChangeMode: (state, action: PayloadAction<string>) => {
+      state.changeMode = action.payload;
+    },
   },
 });
 
-export const { toogleAuth, toogleChooseAuth, tooglePinjam, toogleSukses } =
-  toogleSlice.actions;
+export const {
+  toogleAuth,
+  toogleChooseAuth,
+  tooglePinjam,
+  toogleSukses,
+  toogleChangeMode,
+} = toogleSlice.actions;
 
 export const toogleReducer = toogleSlice.reducer;

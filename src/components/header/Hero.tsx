@@ -9,11 +9,11 @@ const Hero = () => {
     <div className="min-h-[552px] bg-[#FBF8F1] flex justify-between items-center">
       <div className="px-[60px]">
         <div className="max-w-2xl">
-          <h1 className="text-[40px] font-[600] text-[#313552]">
+          <h1 className="text-[40px] font-[600] text-[#313552] 2xl:tracking-wide">
             Meminjam buku tanpa perlu ke Perpustakaan dengan meminjam buku
             secara online
           </h1>
-          <p className="text-[#707176] mt-[18px] text-[20px]">
+          <p className="text-[#707176] mt-[18px] text-[20px] ">
             Membaca buku lebih instan dengan meminjam di ReadMe tanpa harus
             pergi ke perpustakaan
           </p>

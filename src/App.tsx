@@ -9,6 +9,8 @@ import Footer from "./components/Footer";
 import UserPage from "./pages/user/UserPage";
 import EditProfile from "./pages/user/EditProfile";
 import DetailSinopsis from "./pages/user/DetailSinopsis";
+import BacaBuku from "./pages/user/BacaBuku";
+import SIngleCategory from "./pages/user/SIngleCategory";
 
 function App() {
   const isLogin = useAppSelector((state) => state.user.isLogin);
@@ -26,6 +28,8 @@ function App() {
               <Route path="/user" element={<UserPage />} />
               <Route path="/user/edit-profile" element={<EditProfile />} />
               <Route path="/buku/sinopsis" element={<DetailSinopsis />} />
+              <Route path="/buku-saya/buku" element={<BacaBuku />} />
+              <Route path="/daftar-buku/single" element={<SIngleCategory />} />
             </>
           )}
           <Route path="*" element={<Error />} />

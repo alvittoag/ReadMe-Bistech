@@ -22,13 +22,15 @@ const Book = ({ image, title }: Props) => {
         <button
           onClick={() => navigate("/buku/sinopsis")}
           className={`mt-[20px] bg-[#313552] text-[24px] ${
-            active ? "px-[33px]" : "px-[40px]"
+            active
+              ? "px-[33px] 2xl:px-[43px]"
+              : "px-[15px] xl:px-[40px] 2xl:px-[48px]"
           } text-white py-2`}
         >
           {active ? "Baca Sekarang" : "Baca Sinopsis"}
         </button>
         <div className="mt-5 cursor-pointer">
-          {isActive === "Buku Favorite" ? (
+          {isActive === "Buku Favorit" ? (
             <img src={assets.liked} alt="liked" />
           ) : (
             <img

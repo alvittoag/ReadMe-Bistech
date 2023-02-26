@@ -29,6 +29,7 @@ import sinopsis2 from "../assets/images/sinopsis2.svg";
 import hoverProfil from "../assets/images/hover-profile.svg";
 import bookKonfirmasi from "../assets/images/book-konfirmasi.svg";
 import sukses from "../assets/images/sukses.svg";
+import bukuBaca from "../assets/images/buku-baca.svg";
 
 export default {
   logo,
@@ -62,4 +63,5 @@ export default {
   hoverProfil,
   bookKonfirmasi,
   sukses,
+  bukuBaca,
 };

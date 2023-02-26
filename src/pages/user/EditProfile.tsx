@@ -6,7 +6,7 @@ const EditProfile = () => {
   const navigate = useNavigate();
   const [isHover, setIsHover] = useState<boolean>(false);
   return (
-    <div className="bg-[#FBFBFB] px-[60px] py-[50px]">
+    <div className="bg-[#FBFBFB] px-[60px] py-[50px] 2xl:mb-24">
       <h1 className="text-[#313552] text-[32px] font-[600]">Edit Profile</h1>
       <div className="flex gap-16 items-start mt-[39px]">
         <img
