@@ -20,7 +20,7 @@
 
 `Halaman Buku Favorit`
 
-# ![Preview](screenshot/bukufavorit.PNG.PNG)
+# ![Preview](screenshot/bukufavorit.PNG)
 
 `Halaman Buku Saya`
 
