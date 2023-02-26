@@ -1,11 +1,16 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { toogleSukses } from "../../../app/features/toggleSlice";
 
 const ButtonPinjam = () => {
   const [waktu, setWaktu] = useState<string>("");
+  const dispatch = useDispatch();
 
   const pinjam = () => {
     if (waktu === "") {
       setWaktu("0");
+    } else {
+      dispatch(toogleSukses(true));
     }
   };
 

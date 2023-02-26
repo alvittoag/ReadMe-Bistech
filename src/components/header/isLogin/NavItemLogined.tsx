@@ -8,7 +8,7 @@ import assets from "../../../constant/assets";
 const items = [
   { name: "Home", link: "/" },
   { name: "Daftar Buku", link: "/" },
-  { name: "Buku Favorite", link: "/buku-favorit" },
+  { name: "Buku Favorit", link: "/buku-favorit" },
   { name: "Buku Saya", link: "/buku-saya" },
 ];
 
