@@ -5,7 +5,7 @@ type Props = {
 
 const Breadcrumbs = ({ page, link }: Props) => {
   return (
-    <div className="text-[#707176] text-[24px] gap-6 flex items-center ">
+    <div className="text-[#707176] text-[24px] gap-5 flex items-center hover:cursor-pointer">
       <p>{page}</p>
       <span>{">"}</span>
       <p>{link}</p>

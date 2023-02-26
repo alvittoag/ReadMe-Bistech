@@ -8,12 +8,12 @@ const SIngleCategory = () => {
       <Breadcrumbs page="Daftar Buku" link="Buku Cerita" />
       <div className="mt-[28px] grid grid-cols-4 gap-8 2xl:gap-10">
         {books.map((book) => (
-          <>
-            <Book key={book.id} image={book.img} title={book.title} />
-            <Book key={book.id} image={book.img} title={book.title} />
-            <Book key={book.id} image={book.img} title={book.title} />
-            <Book key={book.id} image={book.img} title={book.title} />
-          </>
+          <div key={book.id} className="space-y-28">
+            <Book image={book.img} title={book.title} />
+            <Book image={book.img} title={book.title} />
+            <Book image={book.img} title={book.title} />
+            <Book image={book.img} title={book.title} />
+          </div>
         ))}
       </div>
     </div>
