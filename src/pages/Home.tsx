@@ -1,7 +1,7 @@
 import { useAppSelector } from "../app/hooks";
 import { RootState } from "../app/store";
 import LoginPage from "../components/auth/LoginPage";
-import ListBook from "../components/book/ListBook";
+import ListBook from "../components/book/DaftarBuku";
 import Hero from "../components/header/Hero";
 
 const Home = () => {

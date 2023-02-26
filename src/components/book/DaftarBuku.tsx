@@ -7,7 +7,7 @@ type Props = {
   title: string;
 };
 
-const ListBook = ({ title }: Props) => {
+const DaftarBuku = ({ title }: Props) => {
   const isActive = useAppSelector((state) => state.user.isActive);
   const active = isActive === "Buku Saya";
   const navigate = useNavigate();
@@ -33,4 +33,4 @@ const ListBook = ({ title }: Props) => {
   );
 };
 
-export default ListBook;
+export default DaftarBuku;

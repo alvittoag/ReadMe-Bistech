@@ -1,4 +1,4 @@
-import ListBook from "../../components/book/ListBook";
+import ListBook from "../../components/book/DaftarBuku";
 
 const BukuSaya = () => {
   return (
